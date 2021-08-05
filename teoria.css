@@ -1,0 +1,341 @@
+/*CSS es un lenguaje en cascada
+Los atributos que se insertan caen en cascada si no son modificados por el elemento
+El color se repite pero en se cambia por otro en seccion
+
+Para crear un css aparte
+<link rel="stylesheet" href="documento.css>*/
+
+header{
+    background-color:salmon ;
+    color:gold ;
+}
+nav{
+    background-color:gray ;
+}
+section{
+    background-color:darkblue ;
+    color:firebrick ;
+}
+
+/*
+CLASS 
+Se utiliza para darle estilo a una parte del CSS
+En CSS se escribe con un . adelante y las palabras referidas al estilo
+*/
+.coloresDeTitulos{
+    color: greenyellow;
+}
+
+/*En el HTML se escribe
+<img src="" class="coloresDeTitulos"/>
+
+Se puede aplicar mas de una clase con un ESPACIO en el medio
+<img src="" class="coloresDeTitulos imgChica"/>
+
+CLASS para lo mas general
+
+
+ID para algo especifico
+ID en el html se escribe con # 
+<id= "alinearDerecha"> 
+
+Y en CSS se escribe:  */
+
+#alinearDerecha{
+    text-align: right;
+}
+
+/* 
+HERENCIA Y CASCADA
+Los estilos pasan de padres a hijos por CASCADA salvo que el hijo tenga especificamente su propio estilo.
+
+ESPECIFICIDAD (jerarquias)
+
+!IMPORTANT se escribe luego de la propiedad por cada valor al pisar(no usar mas de 5 poruqe algo esta mal)
+INLINE se escribe como propiedad en el html
+ID css
+CLASS css
+ETIQUETA css*/
+
+/*
+RESETEO CSS 
+Para que no afecte en los diferentes navegadores. Minimizando diferencias visuales
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ESTILOS DE TEXTO
+
+font-style: normal    font-style: italica (cursiva)
+font-weight: normal    font-weight: bold (negrita)
+font-size: 20px / 200%; (tamaño)
+font-family: Impact; san-serif; (cssfontstack.com)
+serif (con detalles en las letras)
+sans serif (sin detalles, enteras)
+text-align: right, left, top; (alineacion)
+text-transform: capitalize, uppercase; (mayusculas)
+line-height: 1.6; (interlineado)
+text-decoration: none, line-through; (enlace/linea al medio)
+letter-spacing: 5px; (espacio entre letra)
+word-spacing:; (espacio entre palabras)
+list-style-type: ;(lista con puntos, numeros)
+list-style-position: ;
+list-style-image: ;
+list-style: ;(contiene los 3 list style)
+
+ESTILOS DE FONDO
+
+background-color:; (color de fondo)
+background-image:; (imagen de fondo)
+background-repeat:; (si queremos que la imagen se repita al ser chica o no)
+background-position:; (eje x y eje y)(top right)
+background-size:; (ancho, alto, px)
+
+UNIDADES DE MEDIDAS
+
+px
+porcetaje (16px = 100%)
+rem (relativa a la etiqueta html) MEJOR PORQUE SE ADAPTA A LOS CAMBIOS
+DE DIMENSIONES
+viewport
+
+TIPOGRAFIA WEB (Google Fonts)
+
+HTML
+<link="https..fontgoogle.. rel="stylesheet">
+CSS
+{font-family:"Roboto", sans-serif}
+
+
+BOX MODELLING
+
+Content: espacio para texto o imagen
+
+Border: limite entre elemento y espacio externo
+(top right bottom left)
+tipo de borde (solid, doulble)
+width (ancho)
+color 
+
+Padding: separacion entre borde y contenido de caja
+(top right bottom left)
+
+Margin: separacion entre borde y afuera de la caja
+(top right bottom left)
+
+
+Overflow 
+visible (sale del cuadro pero es visible) 
+hidden (no sale del cuadro)
+scroll (forma x e y para scrollear)
+auto (scroll en el eje necesario)
+
+DISPLAY
+block se definen en lineas nuevas (article asside block audio)
+inline se definen en linea hasta que no haya espacio (tecto img form)
+
+block convierte el elemento en uno de bloque
+inline convierte el elemento en uno de linea
+
+bug display inline-block: cuando esta muy justo se cae por el bug
+
+MENU CON DISPLAY
+
+
+FLOAT Mover elemento hacia izq o der
+CLEAR Fuerza a que baje a la linea habiendo un float
+POSITION (top right bottom left)
+superponene elementos 
+scrollear y que te siga la pblicidad
+menu con submenu
+POSITION RELATIVE No mueve el resto de los elementos pero se puede superponer
+POSITION ABSOLUTE 
+POSITION FIXED
+POSITION STICKY
+
+UBICAR ELEMENTO
+
+Z INDEX
+Para el orden de superposicion
+
+
+FLEXBOX
+
+Se pueden posicionar elementos, como se distribuyen, tamaño de proporciones
+Es un conjunto de propiedades sobre un contenedor padre ordena a sus hijos
+Distribuir elementos en vert y hor
+Facilita el responsive
+Definir el floujo de elementos
+Alinea elementos respecto al padre
+Para alcanzar objetivo en filas o columnas
+
+display: flex,flex-direction, flex-wrap, flex-flow, justify-content, align-items, align-content
+
+.padre-flex{
+    display: flex;
+    flex-direction: row (filas) row-reverse(izqz a der), column(arriba a abajo), column reverse (abajo a arriba)
+    flex-wrap: nowrap (ocupe la linea) wrap(salta hacia una nueva) wrap-reverse (izq a der y de abajo a arriba)
+    flex-flow: direction y wrap para decirlo en una linea
+    justify-content: flex-start, flex-end, center, space-between(misma distaia entre ellos),
+    space-around(mismo espaciado)space-evently(espacios iguales entre todos los elementos)
+    align-items: stretch (llena toda la altura del contenedor) felx-start(izq arriba) flex-end(abajo der)
+    center(alinea al centro todo) baseline(texto en el centro).
+    align-content: tienen varias lineas de flex items stretch(todo el alto y ancho) flex-star(margen superior) flex-emd(margen inferior)
+    center(centra) space-around(mismo espaciado)space-evently(espacios iguales entre todos los elementos)
+
+Propiedades para los hijos
+.hijo-flex{
+    order: (ordenar cajas)
+    felx-basis: ancho de elemento inicial(row como width 
+    flex-grow: elemento puede ampliarse si hay lugar en el contenedor, Segun el valor el que tiene mas se va con lo que sobra
+    flex-shrink: lo mismo que el grow pero reduce segun el valor
+
+
+
+GRIDS
+
+Sistema de maquetacion en 2 direcciones, filas y columnas X e Y
+Divide la pagina en regiones principales o definir relaciones en tamalo posicion y capas
+Esta pensado para estructuras grandes y comlejas
+
+.padre-grid{
+display: grid o inline-grid
+grid-template-columns: tamaño de columnas
+300px,100px/ 2fr 1fr/ repeat(12, 1fr)
+grid-template-rows: tamaño de filas
+40px, 100px/ 3fr 1fr/ repeat(12, 1fr)
+grid-template-areas:
+grid-column-gap: tamaño entre columnas
+grid-row-gap: tamaño entre filas
+
+grid-template-areas
+grid-column-gap
+grid-row.gap
+.(punto) celda vacia/ none no hay celda
+
+.hijos-grid{
+    justify-items. eje horizontal
+    align-items. eje vertical
+
+Propiedades de items
+justify-self: eje hor
+align-self: eje vert
+grid-area: 
+
+Grids mobile first 
+RESPONSIVE Se deberia mostrar igual de bien en cualquier dispositivo
+Crear 1ero el codigo para dispositivos mas pequeños
+Celular/Tablet/Computadora
+
+1 html
+2 display: grid
+3 nro columnas y filas y espacio de seoaracion
+4 area que ocupara cada caja
+5 como se aocmoda cada area en nuestro diseño
+
+<META> VIEWPORT
+Instrucciones controlar el ancho y el ajuste de la venana
+<meta name= "viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+GRADIENTS
+backgound-color: linear-gradient(to top/bottom/left/right, color, color) Degrada colores en linea
+background-color: radial-gradient(to top/bottom/left/right, color, color) Degrada colore en radio
+
+TRASLADE
+transform: translate(x,Y). Traslada un elemento hacia otra posicion
+ROTATE
+transform: rotate(gds).rotateX(gds).rotateY().rotateZ(). Rota un elemento segun su X Y Z
+SCALE
+transform: scale(X,Y). Escala un elemento
+SKEW (sesgar)
+transform: skew(X,Y). Deforma un elemento
+
+TRANSITION
+div{
+    width 100px;
+    height: 100px;
+    transition: height 2s, width 3s;}
+
+div:hover{
+    height: 200px, width: 200px;}
+
+input{
+    heigth: 100px;
+    width: 100px;
+    transition: all 2s}
+
+input:focus{
+    height: 200px
+    font-size: 24px
+    height: 20px
+
+ANIMATION
+
+@keyframes un-efecto{
+    0% 25% 50% 75& 100%}
+
+section{
+    animation name.
+    animation iteration count. cuantas veces hace la animacion
+    animation timing function.
+    animation duration.
+    animation delay. cuanto tarda en empezar la animacion
+
+LIBRERIAS Y FRAMEWORKS
+
+Librerias Elementos 
+Framework Marco de trabajo. Herramientas y codigo (BOOTSTRAP)
+
+El framework contiene librerias
+
+Bootstrap
+Para crear interfaces web y hojas de estilo de CSS y JS
+Generica. Maquetacion facil
+Es responsive.
+Integra con librerias JS.
+Compatibilidad de navegadores con bootstrap
+
+Instalar
+1codigo compilado listo
+archivos para compilar
+1boostrapcdn (enlace directo)
+instalando paquetes
+
+Tipografia bootstrap
+class LEAD. Lo destaca
+
+Ordenar bootstrap
+CSS
+JS
+INDEX.HTML
+
+html
+incroporar hoja de estilo stylesheet
+script en js al final de body
+
+CONTENEDORES
+ class "container":
+ class "container-fluid": Ancho siempre al 100%
+ class "row": filas donde se divide el codigo del bloque
+
+SISTEMA DE GRILLAS
+La grilla se divide en 12 columnas
+class "col-md-4 col-xs-6"
+columna dispositivo y cantidad de columnas
+
+
+BOOTSTRAP CON JS
+jquery
+popper.js
+javascript
+
+<script> antes de </body>
+
+Carrusel: fotos que pasen solas
+Basic dropdown: menu desplegable
+Ventana modal: Ventana de dialogo

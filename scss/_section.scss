@@ -1,0 +1,22 @@
+
+section{
+    background-color: $color4; 
+    align-content: center;
+    color: $color3;
+    article{
+        text-align: center;
+        line-height: 1.6;
+        font-family: 'Barlow Condensed', sans-serif;
+        padding-top: 2rem;
+        animation-duration: 1s;
+        animation-name: aparecer;
+        padding-bottom: 4rem;
+        div{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: space-around;
+        }
+    }
+}

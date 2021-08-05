@@ -1,0 +1,9 @@
+footer{
+    background-color: $color1;
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: 100px;
+    padding: 50px 10px 50px 10px;
+    text-align: center;
+    align-content: center;
+}

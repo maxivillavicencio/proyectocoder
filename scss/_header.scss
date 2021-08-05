@@ -1,0 +1,22 @@
+header{
+    background-color: $color4;
+    font-family: 'Barlow Condensed', sans-serif;
+    padding: 10px;
+    padding-top: 30px;
+    height: 220px;
+}
+
+aside{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border: $color3 double 5px;
+    div{
+        color: $color3;
+        width: 250px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
